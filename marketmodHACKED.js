@@ -1,7 +1,7 @@
 G.AddData({
-	name:'Market mod HACKED',
-	author:'original is bruno supremo but grbldrbl HACKED it',
-	desc:'adds mARKETS YALL',
+	name:'Market mod',
+	author:'original, Bruno Mussoi Mendonça HACKED, grbldrbl',
+	desc:'Adds markets that can buy or sell items YALL',
 	engineVersion:1,
 	manifest:0,
 	requires:['Default dataset*'],
@@ -10,20 +10,20 @@ G.AddData({
 	},
 	func:function() {
 		G.unitCategories.unshift({
-			id:'market_category-YALL',
-			name:'Trading-YALL'
+			id:'market_category',
+			name:'Trading YALL'
 		});
 
 		new G.Tech({
-			name:'market_tech_HACKED',
-			displayName:'Commerce-HACKED',
+			name:'market_tech',
+			displayName:'Commerce',
 			desc:'@unlocks [trader_icon]s<>[population,Traders] are units that can buy or sell items YALL',
 			icon:[0,0,"market_images",24,1],
 			cost:{
 				'insight':0,
 				'culture':0
 			},
-			req:{'sedentism':true},
+			req:{'sedentism':false},
 			effects:[
 			{
 				type:'show context',
@@ -33,8 +33,8 @@ G.AddData({
 		});
 
 		new G.Tech({
-			name:'advanced catalog YALL',
-			desc:'@unlocks [bazaar_icon]s @unlocks [market_icon]s @unlocks [influence,trading policies]<>[population,Traders] now have a more refined catalog, offering bigger control on what specific items should be traded.',
+			name:'advanced catalog',
+			desc:'@unlocks [bazaar_icon]s @unlocks [market_icon]s @unlocks [influence,trading policies]<>[population,Traders] now have a more refined catalog, offering bigger control on what specific items should be traded YALL.',
 			icon:[0,1,"market_images",24,1],
 			cost:{
 				'insight':0,
@@ -45,25 +45,25 @@ G.AddData({
 
 		G.policyCategories.push({
             id: 'trading_policies',
-            name: 'Trading YALL'
+            name: 'Trading'
         });
 
         new G.Policy({
             name: 'extended food catalog',
-            desc: 'The [food] trading will be refined. You will be able to fine tune what specific items from the category you want to trade (instead of the whole category)',
+            desc: 'The [food] trading will be refined. You will be able to fine tune what specific items from the category you want to trade (instead of the whole category) YALL',
             icon: [0, 2, "market_images", 3, 6],
             cost: {'influence': 0 },
-            startMode: 'off',
+            startMode: 'on',
             req: {'advanced catalog': true },
             category: 'trading_policies',
         });
         new G.Policy({
             name: 'extended archaic catalog',
-            desc: 'The [archaic building materials] trading will be refined. You will be able to fine tune what specific items from the category you want to trade (instead of the whole category)',
+            desc: 'The [archaic building materials] trading will be refined. You will be able to fine tune what specific items from the category you want to trade (instead of the whole category) YALL',
             icon: [0, 2, "market_images", 2, 7],
             cost: {'influence': 0 },
-            startMode: 'off',
-            req: {'advanced catalog': true },
+            startMode: 'on',
+            req: {'advanced catalog': false },
             category: 'trading_policies',
         });
         new G.Policy({
@@ -71,8 +71,8 @@ G.AddData({
             desc: 'The [basic building materials] trading will be refined. You will be able to fine tune what specific items from the category you want to trade (instead of the whole category)',
             icon: [0, 2, "market_images", 2, 8],
             cost: {'influence': 0 },
-            startMode: 'off',
-            req: {'advanced catalog': true },
+            startMode: 'on',
+            req: {'advanced catalog': false },
             category: 'trading_policies',
         });
         new G.Policy({
@@ -80,8 +80,8 @@ G.AddData({
             desc: 'The [precious building materials] trading will be refined. You will be able to fine tune what specific items from the category you want to trade (instead of the whole category)',
             icon: [0, 2, "market_images", 16, 8],
             cost: {'influence': 0 },
-            startMode: 'off',
-            req: {'advanced catalog': true },
+            startMode: 'on',
+            req: {'advanced catalog': false },
             category: 'trading_policies',
         });
 
@@ -103,9 +103,9 @@ G.AddData({
 			icon:[0,1,"market_images",24,1],
 			chance:20,
 			cost: {
-				'culture': 15
+				'culture': 0
 			},
-			req:{'sedentism':true},
+			req:{'sedentism':false},
 		});
 
 		let buy_modes = {
@@ -119,61 +119,61 @@ G.AddData({
 				name:'Herb',
 				icon: [4,6],
 				desc:'Buy [herb]s with [market_coin].',
-				req:{'extended food catalog': 'on'}
+				req:{'extended food catalog': 'off'}
 			},
 			'fruit':{
 				name:'Fruit',
 				icon: [4,7],
 				desc:'Buy [fruit] with [market_coin].',
-				req:{'extended food catalog': 'on'}
+				req:{'extended food catalog': 'off'}
 			},
 			'meat':{
 				name:'Meat',
 				icon: [5,7],
 				desc:'Buy [meat] with [market_coin].',
-				req:{'extended food catalog': 'on'}
+				req:{'extended food catalog': 'off'}
 			},
 			'cooked meat':{
 				name:'Cooked meat',
 				icon: [6,7],
 				desc:'Buy [cooked meat] with [market_coin].',
-				req:{'extended food catalog': 'on'}
+				req:{'extended food catalog': 'off'}
 			},
 			'cured meat':{
 				name:'Cured meat',
 				icon: [11,6],
 				desc:'Buy [cured meat] with [market_coin].',
-				req:{'extended food catalog': 'on'}
+				req:{'extended food catalog': 'off'}
 			},
 			'seafood':{
 				name:'Seafood',
 				icon: [5,6],
 				desc:'Buy [seafood] with [market_coin].',
-				req:{'extended food catalog': 'on'}
+				req:{'extended food catalog': 'off'}
 			},
 			'cooked seafood':{
 				name:'Cooked seafood',
 				icon: [6,6],
 				desc:'Buy [cooked seafood] with [market_coin].',
-				req:{'extended food catalog': 'on'}
+				req:{'extended food catalog': 'off'}
 			},
 			'cured seafood':{
 				name:'Cured seafood',
 				icon: [12,6],
 				desc:'Buy [cured seafood] with [market_coin].',
-				req:{'extended food catalog': 'on'}
+				req:{'extended food catalog': 'off'}
 			},
 			'bread':{
 				name:'Bread',
 				icon: [7,7],
 				desc:'Buy [bread]s with [market_coin].',
-				req:{'extended food catalog': 'on'}
+				req:{'extended food catalog': 'off'}
 			},
 			'bugs':{
 				name:'Bugs',
 				icon: [8,11],
 				desc:'Buy [bugs] with [market_coin].',
-				req:{'extended food catalog': 'on' }
+				req:{'extended food catalog': 'off' }
 			},
 			'arch_build':{
 				name:'Archaic materials (all)',
@@ -184,31 +184,31 @@ G.AddData({
 				name:'Stone',
 				icon: [2,6],
 				desc:'Buy [stone] with [market_coin].',
-				req:{'extended archaic catalog': 'on' }
+				req:{'extended archaic catalog': 'off' }
 			},
 			'stick':{
 				name:'Stick',
 				icon: [0,6],
 				desc:'Buy [stick] with [market_coin].',
-				req:{'extended archaic catalog': 'on' }
+				req:{'extended archaic catalog': 'off' }
 			},
 			'limestone':{
 				name:'Limestone',
 				icon: [6,8],
 				desc:'Buy [limestone] with [market_coin].',
-				req:{'extended archaic catalog': 'on' }
+				req:{'extended archaic catalog': 'off' }
 			},
 			'mud':{
 				name:'Mud',
 				icon: [0,7],
 				desc:'Buy [mud] with [market_coin].',
-				req:{'extended archaic catalog': 'on' }
+				req:{'extended archaic catalog': 'off' }
 			},
 			'bone':{
 				name:'Bone',
 				icon: [8,7],
 				desc:'Buy [bone] with [market_coin].',
-				req:{'extended archaic catalog': 'on' }
+				req:{'extended archaic catalog': 'off' }
 			},
 			'base_build':{
 				name:'Basic materials (all)',
@@ -219,25 +219,25 @@ G.AddData({
 				name:'Cut stone',
 				icon: [0,8],
 				desc:'Buy [cut stone] with [market_coin].',
-				req:{'extended basic catalog': 'on' }
+				req:{'extended basic catalog': 'off' }
 			},
 			'log':{
 				name:'Log',
 				icon: [1,6],
 				desc:'Buy [log] with [market_coin].',
-				req:{'extended basic catalog': 'on' }
+				req:{'extended basic catalog': 'off' }
 			},
 			'lumber':{
 				name:'Lumber',
 				icon: [1,8],
 				desc:'Buy [lumber] with [market_coin].',
-				req:{'extended basic catalog': 'on' }
+				req:{'extended basic catalog': 'off' }
 			},
 			'brick':{
 				name:'Brick',
 				icon: [3,8],
 				desc:'Buy [brick] with [market_coin].',
-				req:{'extended basic catalog': 'on' }
+				req:{'extended basic catalog': 'off' }
 			},
 			'precious_materials':{
 				name:'Precious materials (all)',
@@ -248,19 +248,19 @@ G.AddData({
 				name:'Marble',
 				icon: [7,8],
 				desc:'Buy [marble] with [market_coin].',
-				req:{'extended precious catalog': 'on' }
+				req:{'extended precious catalog': 'off' }
 			},
 			'gold block':{
 				name:'Gold block',
 				icon: [14,8],
 				desc:'Buy [gold block] with [market_coin].',
-				req:{'extended precious catalog': 'on' }
+				req:{'extended precious catalog': 'off' }
 			},
 			'gem block':{
 				name:'Gem block',
 				icon: [17,8],
 				desc:'Buy [gem block] with [market_coin].',
-				req:{'extended precious catalog': 'on' }
+				req:{'extended precious catalog': 'off' }
 			},
 			'coal':{
 				name:'coal',
@@ -312,172 +312,172 @@ G.AddData({
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'herb':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'food',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'fruit':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'food',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'meat':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'food',
 			type:'convert',
 			from:{'market_coin':2},
 			into:{'cooked meat':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'food',
 			type:'convert',
 			from:{'market_coin':2},
 			into:{'cured meat':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'food',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'seafood':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'food',
 			type:'convert',
 			from:{'market_coin':2},
 			into:{'cooked seafood':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'food',
 			type:'convert',
 			from:{'market_coin':2},
 			into:{'cured seafood':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'food',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'bread':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'food',
 			type:'convert',
 			from:{'market_coin':0.5},
 			into:{'bugs':1},
-			every:5,
-			req:{'insects as food': 'on'}
+			every:0,
+			req:{'insects as food': 'true'}
 		},
 		{
 			mode:'herb',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'herb':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:0,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'fruit',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'fruit':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:0,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'meat',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'meat':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:0,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'cooked meat',
 			type:'convert',
 			from:{'market_coin':2},
 			into:{'cooked meat':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:0,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'cured meat',
 			type:'convert',
 			from:{'market_coin':2},
 			into:{'cured meat':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:0,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'seafood',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'seafood':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:0,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'cooked seafood',
 			type:'convert',
 			from:{'market_coin':2},
 			into:{'cooked seafood':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:0,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'cured seafood',
 			type:'convert',
 			from:{'market_coin':2},
 			into:{'cured seafood':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:0,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'bread',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'bread':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:0,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'bugs',
 			type:'convert',
 			from:{'market_coin':0.5},
 			into:{'bugs':1},
-			every:5,
-			req:{'advanced catalog': true }
+			every:0,
+			req:{'advanced catalog': false }
 		},
 		{
 			mode:'arch_build',
 			type:'convert',
 			from:{'market_coin':0.5},
 			into:{'stone':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'arch_build',
 			type:'convert',
 			from:{'market_coin':0.5},
 			into:{'stick':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'arch_build',
 			type:'convert',
 			from:{'market_coin':0.5},
 			into:{'bone':1},
-			every:5,
+			every:0,
 			req:{'bone-working': true}
 		},
 		{
@@ -485,14 +485,14 @@ G.AddData({
 			type:'convert',
 			from:{'market_coin':0.5},
 			into:{'limestone':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'arch_build',
 			type:'convert',
 			from:{'market_coin':0.5},
 			into:{'mud':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'stone',
@@ -500,7 +500,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'stone':1},
 			every:5,
-			req:{'advanced catalog': true}
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'stick',
@@ -508,7 +508,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'stick':1},
 			every:5,
-			req:{'advanced catalog': true}
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'bone',
@@ -516,7 +516,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'bone':1},
 			every:5,
-			req:{'advanced catalog': true }
+			req:{'advanced catalog': false }
 		},
 		{
 			mode:'limestone',
@@ -524,7 +524,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'limestone':1},
 			every:5,
-			req:{'advanced catalog': true}
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'mud',
@@ -532,147 +532,147 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'mud':1},
 			every:5,
-			req:{'advanced catalog': true}
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'base_build',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'cut stone':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'base_build',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'log':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'base_build',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'lumber':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'base_build',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'brick':1},
-			every:5
+			every:0
 		},
 		{
 			mode:'cut stone',
 			type:'convert',
 			from:{'market_coin':0.5},
 			into:{'cut stone':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:0,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'log',
 			type:'convert',
 			from:{'market_coin':0.5},
 			into:{'log':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:0,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'lumber',
 			type:'convert',
 			from:{'market_coin':0.5},
 			into:{'lumber':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:0,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'brick',
 			type:'convert',
 			from:{'market_coin':0.5},
 			into:{'brick':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:0,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'precious_materials',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'marble':1},
-			every:5,
+			every:50,
 		},
 		{
 			mode:'precious_materials',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'gold block':1},
-			every:5,
+			every:0,
 		},
 		{
 			mode:'precious_materials',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'gem block':1},
-			every:5,
+			every:50,
 		},
 		{
 			mode:'marble',
 			type:'convert',
 			from:{'market_coin':0.5},
 			into:{'marble':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:0,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'gold block',
 			type:'convert',
 			from:{'market_coin':0.5},
 			into:{'gold block':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:20,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'gem block',
 			type:'convert',
 			from:{'market_coin':0.5},
 			into:{'gem block':1},
-			every:5,
-			req:{'advanced catalog': true}
+			every:50,
+			req:{'advanced catalog': false}
 		},
 		{
 			mode:'coal',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'coal':1},
-			every:5,
+			every:0,
 		},
 		{
 			mode:'leather',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'leather':1},
-			every:5,
+			every:0,
 		},
 		{
 			mode:'basic clothes',
 			type:'convert',
 			from:{'market_coin':2},
 			into:{'basic clothes':1},
-			every:5,
+			every:0,
 		},
 		{
 			mode:'salt',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'salt':1},
-			every:5,
+			every:0,
 		},
 		{
 			mode:'pot',
 			type:'convert',
 			from:{'market_coin':1},
 			into:{'pot':1},
-			every:5,
+			every:0,
 		},
 		{
 			type:'mult',
@@ -797,7 +797,7 @@ G.AddData({
 			cost:{},
 			req:{
 				'market_tech':true,
-				'advanced catalog':true,
+				'advanced catalog':false,
 			},
 			use:{
 				'worker':0,
@@ -816,11 +816,11 @@ G.AddData({
 			cost:{},
 			req:{
 				'market_tech':true,
-				'advanced catalog':true,
+				'advanced catalog':false,
 			},
 			use:{
-				'worker':1,
-				'land':1,
+				'worker':0,
+				'land':0,
 			},
 			gizmos:true,
 			modes: sell_modes,
@@ -843,7 +843,7 @@ G.AddData({
 			cost:{},
 			req:{
 				'market_tech':true,
-				'advanced catalog':true,
+				'advanced catalog':false,
 			},
 			use:{
 				'worker':0,
@@ -862,7 +862,7 @@ G.AddData({
 			cost:{},
 			req:{
 				'market_tech':true,
-				'advanced catalog':true,
+				'advanced catalog':false,
 			},
 			use:{
 				'worker':0,
