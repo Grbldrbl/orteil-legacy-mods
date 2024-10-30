@@ -23,7 +23,7 @@ G.AddData({
 				'insight':0,
 				'culture':0
 			},
-			req:{'sedentism':false},
+			req:{},
 			effects:[
 			{
 				type:'show context',
@@ -40,7 +40,7 @@ G.AddData({
 				'insight':0,
 				'culture':0
 			},
-			req:{'market_tech':true}
+			req:{}
 		});
 
 		G.policyCategories.push({
@@ -63,7 +63,7 @@ G.AddData({
             icon: [0, 2, "market_images", 2, 7],
             cost: {'influence': 0 },
             startMode: 'on',
-            req: {'advanced catalog': false },
+            req: {},
             category: 'trading_policies',
         });
         new G.Policy({
@@ -72,7 +72,7 @@ G.AddData({
             icon: [0, 2, "market_images", 2, 8],
             cost: {'influence': 0 },
             startMode: 'on',
-            req: {'advanced catalog': false },
+            req: {},
             category: 'trading_policies',
         });
         new G.Policy({
@@ -81,7 +81,7 @@ G.AddData({
             icon: [0, 2, "market_images", 16, 8],
             cost: {'influence': 0 },
             startMode: 'on',
-            req: {'advanced catalog': false },
+            req: {},
             category: 'trading_policies',
         });
 
@@ -105,7 +105,7 @@ G.AddData({
 			cost: {
 				'culture': 0
 			},
-			req:{'sedentism':false},
+			req:{},
 		});
 
 		let buy_modes = {
@@ -119,61 +119,61 @@ G.AddData({
 				name:'Herb',
 				icon: [4,6],
 				desc:'Buy [herb]s with [market_coin].',
-				req:{'extended food catalog': 'off'}
+				req:{}
 			},
 			'fruit':{
 				name:'Fruit',
 				icon: [4,7],
 				desc:'Buy [fruit] with [market_coin].',
-				req:{'extended food catalog': 'off'}
+				req:{}
 			},
 			'meat':{
 				name:'Meat',
 				icon: [5,7],
 				desc:'Buy [meat] with [market_coin].',
-				req:{'extended food catalog': 'off'}
+				req:{}
 			},
 			'cooked meat':{
 				name:'Cooked meat',
 				icon: [6,7],
 				desc:'Buy [cooked meat] with [market_coin].',
-				req:{'extended food catalog': 'off'}
+				req:{}
 			},
 			'cured meat':{
 				name:'Cured meat',
 				icon: [11,6],
 				desc:'Buy [cured meat] with [market_coin].',
-				req:{'extended food catalog': 'off'}
+				req:{}
 			},
 			'seafood':{
 				name:'Seafood',
 				icon: [5,6],
 				desc:'Buy [seafood] with [market_coin].',
-				req:{'extended food catalog': 'off'}
+				req:{}
 			},
 			'cooked seafood':{
 				name:'Cooked seafood',
 				icon: [6,6],
 				desc:'Buy [cooked seafood] with [market_coin].',
-				req:{'extended food catalog': 'off'}
+				req:{}
 			},
 			'cured seafood':{
 				name:'Cured seafood',
 				icon: [12,6],
 				desc:'Buy [cured seafood] with [market_coin].',
-				req:{'extended food catalog': 'off'}
+				req:{}
 			},
 			'bread':{
 				name:'Bread',
 				icon: [7,7],
 				desc:'Buy [bread]s with [market_coin].',
-				req:{'extended food catalog': 'off'}
+				req:{}
 			},
 			'bugs':{
 				name:'Bugs',
 				icon: [8,11],
 				desc:'Buy [bugs] with [market_coin].',
-				req:{'extended food catalog': 'off' }
+				req:{}
 			},
 			'arch_build':{
 				name:'Archaic materials (all)',
@@ -184,31 +184,31 @@ G.AddData({
 				name:'Stone',
 				icon: [2,6],
 				desc:'Buy [stone] with [market_coin].',
-				req:{'extended archaic catalog': 'off' }
+				req:{}
 			},
 			'stick':{
 				name:'Stick',
 				icon: [0,6],
 				desc:'Buy [stick] with [market_coin].',
-				req:{'extended archaic catalog': 'off' }
+				req:{}
 			},
 			'limestone':{
 				name:'Limestone',
 				icon: [6,8],
 				desc:'Buy [limestone] with [market_coin].',
-				req:{'extended archaic catalog': 'off' }
+				req:{}
 			},
 			'mud':{
 				name:'Mud',
 				icon: [0,7],
 				desc:'Buy [mud] with [market_coin].',
-				req:{'extended archaic catalog': 'off' }
+				req:{}
 			},
 			'bone':{
 				name:'Bone',
 				icon: [8,7],
 				desc:'Buy [bone] with [market_coin].',
-				req:{'extended archaic catalog': 'off' }
+				req:{}
 			},
 			'base_build':{
 				name:'Basic materials (all)',
@@ -219,25 +219,25 @@ G.AddData({
 				name:'Cut stone',
 				icon: [0,8],
 				desc:'Buy [cut stone] with [market_coin].',
-				req:{'extended basic catalog': 'off' }
+				req:{}
 			},
 			'log':{
 				name:'Log',
 				icon: [1,6],
 				desc:'Buy [log] with [market_coin].',
-				req:{'extended basic catalog': 'off' }
+				req:{}
 			},
 			'lumber':{
 				name:'Lumber',
 				icon: [1,8],
 				desc:'Buy [lumber] with [market_coin].',
-				req:{'extended basic catalog': 'off' }
+				req:{}
 			},
 			'brick':{
 				name:'Brick',
 				icon: [3,8],
 				desc:'Buy [brick] with [market_coin].',
-				req:{'extended basic catalog': 'off' }
+				req:{}
 			},
 			'precious_materials':{
 				name:'Precious materials (all)',
@@ -248,19 +248,19 @@ G.AddData({
 				name:'Marble',
 				icon: [7,8],
 				desc:'Buy [marble] with [market_coin].',
-				req:{'extended precious catalog': 'off' }
+				req:{}
 			},
 			'gold block':{
 				name:'Gold block',
 				icon: [14,8],
 				desc:'Buy [gold block] with [market_coin].',
-				req:{'extended precious catalog': 'off' }
+				req:{}
 			},
 			'gem block':{
 				name:'Gem block',
 				icon: [17,8],
 				desc:'Buy [gem block] with [market_coin].',
-				req:{'extended precious catalog': 'off' }
+				req:{}
 			},
 			'coal':{
 				name:'coal',
@@ -384,7 +384,7 @@ G.AddData({
 			from:{'market_coin':1},
 			into:{'herb':1},
 			every:0,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'fruit',
@@ -392,7 +392,7 @@ G.AddData({
 			from:{'market_coin':1},
 			into:{'fruit':1},
 			every:0,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'meat',
@@ -400,7 +400,7 @@ G.AddData({
 			from:{'market_coin':1},
 			into:{'meat':1},
 			every:0,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'cooked meat',
@@ -408,7 +408,7 @@ G.AddData({
 			from:{'market_coin':2},
 			into:{'cooked meat':1},
 			every:0,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'cured meat',
@@ -416,7 +416,7 @@ G.AddData({
 			from:{'market_coin':2},
 			into:{'cured meat':1},
 			every:0,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'seafood',
@@ -424,7 +424,7 @@ G.AddData({
 			from:{'market_coin':1},
 			into:{'seafood':1},
 			every:0,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'cooked seafood',
@@ -432,7 +432,7 @@ G.AddData({
 			from:{'market_coin':2},
 			into:{'cooked seafood':1},
 			every:0,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'cured seafood',
@@ -440,7 +440,7 @@ G.AddData({
 			from:{'market_coin':2},
 			into:{'cured seafood':1},
 			every:0,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'bread',
@@ -448,7 +448,7 @@ G.AddData({
 			from:{'market_coin':1},
 			into:{'bread':1},
 			every:0,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'bugs',
@@ -456,7 +456,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'bugs':1},
 			every:0,
-			req:{'advanced catalog': false }
+			req:{}
 		},
 		{
 			mode:'arch_build',
@@ -500,7 +500,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'stone':1},
 			every:5,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'stick',
@@ -508,7 +508,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'stick':1},
 			every:5,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'bone',
@@ -516,7 +516,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'bone':1},
 			every:5,
-			req:{'advanced catalog': false }
+			req:{}
 		},
 		{
 			mode:'limestone',
@@ -524,7 +524,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'limestone':1},
 			every:5,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'mud',
@@ -532,7 +532,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'mud':1},
 			every:5,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'base_build',
@@ -568,7 +568,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'cut stone':1},
 			every:0,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'log',
@@ -576,7 +576,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'log':1},
 			every:0,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'lumber',
@@ -584,7 +584,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'lumber':1},
 			every:0,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'brick',
@@ -592,7 +592,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'brick':1},
 			every:0,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'precious_materials',
@@ -621,7 +621,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'marble':1},
 			every:0,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'gold block',
@@ -629,7 +629,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'gold block':1},
 			every:20,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'gem block',
@@ -637,7 +637,7 @@ G.AddData({
 			from:{'market_coin':0.5},
 			into:{'gem block':1},
 			every:50,
-			req:{'advanced catalog': false}
+			req:{}
 		},
 		{
 			mode:'coal',
@@ -678,7 +678,7 @@ G.AddData({
 			type:'mult',
 			value:1.1,
 			req:{
-				'traders':true
+				
 			}
 		}
 		];
@@ -757,7 +757,7 @@ G.AddData({
 			desc:'A [population, Trader] that can buy items.',
 			icon:[2,0,"market_images", 0,1,"market_images"],
 			cost:{},
-			req:{'market_tech':true},
+			req:{},
 			use:{
 				'worker':0,
 			},
@@ -772,7 +772,7 @@ G.AddData({
 			desc:'A [population, Trader] that can sell items.',
 			icon:[1,0,"market_images", 0,1,"market_images"],
 			cost:{},
-			req:{'market_tech':true},
+			req:{},
 			use:{
 				'worker':0,
 			},
@@ -796,8 +796,6 @@ G.AddData({
 			icon:[2,0,"market_images", 1,1,"market_images"],
 			cost:{},
 			req:{
-				'market_tech':true,
-				'advanced catalog':false,
 			},
 			use:{
 				'worker':0,
@@ -815,8 +813,6 @@ G.AddData({
 			icon:[1,0,"market_images", 1,1,"market_images"],
 			cost:{},
 			req:{
-				'market_tech':true,
-				'advanced catalog':false,
 			},
 			use:{
 				'worker':0,
@@ -842,8 +838,7 @@ G.AddData({
 			icon:[2,0,"market_images", 2,1,"market_images"],
 			cost:{},
 			req:{
-				'market_tech':true,
-				'advanced catalog':false,
+				
 			},
 			use:{
 				'worker':0,
@@ -861,8 +856,7 @@ G.AddData({
 			icon:[1,0,"market_images", 2,1,"market_images"],
 			cost:{},
 			req:{
-				'market_tech':true,
-				'advanced catalog':false,
+				
 			},
 			use:{
 				'worker':0,
