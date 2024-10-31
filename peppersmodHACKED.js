@@ -3,7 +3,7 @@ name:'peppers HACKED',
 author:'original, Orteil HACKED, grbldrbl',
 desc:'a HACKED mod that adds hot peppers and hot sauce but they are HACKED.',
 engineVersion:1,
-manifest:'modManifest.js',
+manifest:0,
 requires:['Default dataset*'],
 sheets:{'spicySheet':'https://brunosupremo.github.io/market_mod/market_images.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
 func:function()
