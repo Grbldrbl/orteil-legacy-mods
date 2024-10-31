@@ -1,5 +1,5 @@
 G.AddData({
-	name:'Market mod',
+	name:'Market mod HACKED',
 	author:'original, Bruno Mussoi Mendonça HACKED, grbldrbl',
 	desc:'Adds markets that can buy or sell items YALL',
 	engineVersion:1,
