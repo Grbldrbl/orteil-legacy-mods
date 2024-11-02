@@ -22,7 +22,6 @@ func:function()
 		//adding hot pepper as something that can be gathered from grass
 	G.getDict('grass').res['gather']['mail']=5;
 	
-	//Then we add a new technology which is required by the artisans to gain access to the "hot sauce" mode :
 	new G.Tech({
 		name:'computer tech',
 		desc:'gatherers can now produce [mail]
@@ -34,7 +33,7 @@ func:function()
 	//Finally, we add a trait that amplifies the benefits of consuming hot sauce; it will take on average 20 years to appear once the conditions (knowing the "Computer tech" tech) is fulfilled.
 	new G.Trait({
 		name:'gmail madness',
-		desc:'@your people appreciate [mail and letters] twice as much and will be twice as happy from consuming it.',
+		desc:'@your people appreciate [mail] twice as much and will be twice as happy from consuming it.',
 		icon:[0,1,'spicySheet'],
 		chance:20,
 		req:{'computer tech':true},
