@@ -1,43 +1,45 @@
 G.AddData({
-name:'Example mod',
-author:'Orteil',
+name:'Gmail mod',
+author:'Grbldrbl',
 desc:'A gmail mod',
 engineVersion:1,
 manifest:0,
 requires:['Default dataset*'],
-sheets:{'grbldrbl.github.io/orteil-legacy-mods/gmailSheet.png'},//custom stylesheet
+sheets:{'gmailSheet' 'grbldrbl.github.io/orteil-legacy-mods/gmailSheet.png'},//custom stylesheet
 func:function()
 {
 	new G.Res({
 		name:'mail',
 		desc:'[mail]s are loaded with text for stuff.',
 		icon:[0,0],
-		partOf:'misc',
+		turnToByContext:{'eat':{'health':0,'happiness':55},
+		partOf:'food',
 		category:'Miscellaneous',
+		req{'computer tech':true}
 	});
 	
 	//Then we augment the base data to incorporate our new resources :
 		//adding hot pepper as something that can be gathered from grass
-	G.getDict('grass').res['gather']['mail']=55;
+	G.getDict('grass').res['gather']['mail']=5;
 	
 	//Then we add a new technology which is required by the artisans to gain access to the "hot sauce" mode :
 	new G.Tech({
 		name:'computer tech',
 		desc:'gatherers can now produce [mail]
-		icon:[0,1,'spicySheet'],
+		icon:[0,1,'gmailSheet'],
 		cost:{'insight':10},
-		req:{'cooking':true},
+		req:{},
 	});
 	
-	//Finally, we add a trait that amplifies the benefits of consuming hot sauce; it will take on average 20 years to appear once the conditions (knowing the "Hot sauce preparing" tech) is fulfilled.
+	//Finally, we add a trait that amplifies the benefits of consuming hot sauce; it will take on average 20 years to appear once the conditions (knowing the "Computer tech" tech) is fulfilled.
 	new G.Trait({
-		name:'hot sauce madness',
-		desc:'@your people appreciate [hot sauce] twice as much and will be twice as happy from consuming it.',
-		icon:[1,1,'spicySheet'],
+		name:'gmail madness',
+		desc:'@your people appreciate [mail and letters] twice as much and will be twice as happy from consuming it.',
+		icon:[0,1,'spicySheet'],
 		chance:20,
-		req:{'hot sauce preparing':true},
+		req:{'computer tech':true},
 		effects:[
-			{type:'function',func:function(){G.getDict('hot sauce').turnToByContext['eat']['happiness']=0.2;}},//this is a custom function executed when we gain the trait
+			{type:'function',func:function(){G.getDict('mail').turnToByContext['eat']['happiness']=120;}},//this is a custom function executed when we gain the trait
 		],
 	});
 	
