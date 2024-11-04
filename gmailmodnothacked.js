@@ -13,8 +13,8 @@ func:function() {
 		});
 {
 	new G.Unit({
-			name:'market_buy',
-			displayName:'Market',
+			name:'computer',
+			displayName:'Computer',
 			desc:'A computer is set in this piece of [land] to mail. note: USELESS. gatherers gather mail from GRASS XD',
 			icon:[0,0,"gmailSheet"],
 			cost:{},
@@ -24,8 +24,7 @@ func:function() {
 			use:{
 				'land':1,
 			},
-			gizmos:true,
-			category:'mail_category',
+			gizmos:false
 		});
 	
 	new G.Res({
