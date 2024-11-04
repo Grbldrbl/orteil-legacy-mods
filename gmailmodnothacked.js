@@ -12,15 +12,21 @@ func:function() {
 			name:'mailing'
 		});
 {
+G.resCategories={
+		'compyoutah technolageis':{
+			name:'computer technoligies',
+			base:[],
+			side:['computer', 'mail'],
+		},
+	};
+	
 	new G.Unit({
 			name:'computer',
 			displayName:'Computer',
 			desc:'A computer is set in this piece of [land] to mail. note: USELESS. gatherers gather mail from GRASS XD',
 			icon:[0,0,"gmailSheet"],
 			cost:{},
-			req:{
-				'computer-tech':true
-			},
+			req:{},
 			use:{
 				'land':1,
 			},
@@ -34,7 +40,8 @@ func:function() {
 		turnToByContext:{'eat':{'health':0,'happiness':5},
 		partOf:'food',
 		category:'mail_category',
-		req{'computer-tech':true}
+		req{computer-tech:true}
+				 
 	});
 	G.getDict('grass').res['Gather']['mail']=5;
 	
@@ -47,10 +54,10 @@ func:function() {
 	});
 	new G.Trait({
 		name:'gmail madness',
-		desc:'your people .',
+		desc:'your people get more happy by mail.',
 		icon:[0,1,'gmailSheet'],
 		chance:1,
-		req:{'computer-tech':true},
+		req:{computer-tech':true},
 		effects:[
 			{type:'function',func:function(){G.getDict('mail').turnToByContext['eat']['happiness']=12;}}
 		],
