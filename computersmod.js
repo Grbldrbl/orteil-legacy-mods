@@ -6,7 +6,7 @@ G.AddData({
   engineVersion: 1,
   sheets: {"customSheet":"https://grbldrbl.github.io/orteil-legacy-mods/gmailSheet.png"},
   func: function () {
-    new G.Tech({name:'computertech',displayName:'computer tech',icon:[0,0],cost:{insight:10},req:{language:true},desc:'does not work right now',category:'computers',startWith:'0',chance:'1',tutorialMesg:'jnj'})
+    new G.Tech({name:'computertech',displayName:'computer tech',icon:[0,0],cost:{insight:1},req:{language:true},desc:'does not work right now',category:'computers',startWith:'0',chance:'1',tutorialMesg:'jnj'})
     new G.Unit({
 			name:'computer',
 			displayName:'Computer',
