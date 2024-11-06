@@ -17,6 +17,6 @@ G.AddData({
 			use:{
 				'land':1,
 			},
-			gizmos:false,
+			gizmos:false
   }
 });
