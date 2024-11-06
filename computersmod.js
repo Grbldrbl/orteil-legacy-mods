@@ -22,8 +22,7 @@ G.AddData({
 			use:{
 				'land':1,
 			},
-			gizmos:true,
-		        category:'market_category',
+			gizmos:false
 });
 
   }
