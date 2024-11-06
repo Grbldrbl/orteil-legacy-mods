@@ -14,7 +14,7 @@ func:function()
 	new G.Res({
 		name:'mail',
 		desc:'',
-		icon:[0,1,'spicySheet'],
+		icon:[0,1,'gmailSheet'],
 		turnToByContext:{'eat':{'health':0.01,'happiness':0.03},'decay':{'junk mail':0.5}},//this basically translates to : "when eaten, generate some health and happiness; when rotting, turn into either nothing or some spoiled food"
 		partOf:'food',
 		category:'food',
@@ -42,7 +42,7 @@ func:function()
 	//Then we add a new technology which is required by the artisans to gain access to the "junk mail" mode :
 	new G.Tech({
 		name:'computer tech',
-		desc:'@[artisan]s can now produce [junk mail] from [mail]s.//This special recipe allows a skilled craftsman to fully express the complex aromas present in hot peppers.',
+		desc:'@[artisan]s can now produce [junk mail]s from [mail]s.//This special recipe allows a skilled craftsman to fully express the complex aromas present in hot peppers.',
 		icon:[0,0,'gmailSheet'],
 		cost:{'insight':10},
 		req:{},
@@ -51,7 +51,7 @@ func:function()
 	//Finally, we add a trait that amplifies the benefits of consuming hot sauce; it will take on average 20 years to appear once the conditions (knowing the "Hot sauce preparing" tech) is fulfilled.
 	new G.Trait({
 		name:'mail madness',
-		desc:'@your people appreciate [hot sauce] twice as much and will be twice as happy from consuming it.',
+		desc:'@your people appreciate [mail]s twice as much and will be twice as happy from consuming it.',
 		icon:[0,1,'gmailSheet'],
 		chance:20,
 		req:{'computer tech':true},
