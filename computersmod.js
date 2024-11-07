@@ -10,19 +10,20 @@ G.AddData({
 			id:'Compyoutah-tek',
 			name:'computers'
 });
-    new G.Tech({name:'computertech',displayName:'computer tech',icon:[0,0],cost:{insight:1},req:{language:true},desc:'adds [computer]s.',category:'computers',startWith:'0',chance:'1',tutorialMesg:'jnj'})
+    new G.Tech({name:'computertech',displayName:'computer tech',icon:['customSheet', 0,0],cost:{insight:1},req:{language:true},desc:'adds [computer]s.',category:'computers',startWith:'0',chance:'1',tutorialMesg:'jnj'})
  
 	  new G.Unit({
 			name:'computer',
 			displayName:'Computer',
 			desc:'A computer.',
-			icon:[0,0],
+			icon:['customSheet', 0,0],
 			cost:{},
 			req:{'computertech':true},
 			use:{
 				'land':1,
 			},
-			gizmos:false
+			gizmos:true,
+		  category:'Compyoutah-tek',
 });
 
   }
